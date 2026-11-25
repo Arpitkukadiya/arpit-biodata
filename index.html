@@ -70,7 +70,11 @@ button{font:inherit;color:inherit}
 .card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:1.7rem;box-shadow:var(--shadow);transition:transform .35s var(--ease),box-shadow .35s,border-color .35s}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--gold-l)}
 .icon-ring{display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:var(--gold-pale);color:var(--maroon);margin-bottom:1rem}
-.icon-ring .i{width:24px;height:24px}
+.icon-ring {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .card h3{font-size:1.35rem;margin-bottom:.5rem}
 .card p:last-child{margin:0}
 .center{text-align:center}
@@ -159,7 +163,11 @@ html[lang="gu"] .hero .subtitle{font-style:normal}
 .d-item{display:flex;gap:1rem;align-items:center;background:#fff;border:1px solid var(--border);border-radius:var(--r);padding:1.1rem 1.2rem;transition:border-color .3s,box-shadow .3s}
 .d-item:hover{border-color:var(--gold-l);box-shadow:var(--shadow)}
 .d-item .icon-ring{width:46px;height:46px;margin:0}
-.d-item .icon-ring .i{width:21px;height:21px}
+.icon-ring .i {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
 .d-label{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold)}
 .details dd{margin:.1rem 0 0;font-family:var(--serif);font-size:1.12rem;font-weight:600;color:var(--ink);line-height:1.35;overflow-wrap:anywhere}
 .details dt{margin:0}
@@ -359,9 +367,9 @@ html[lang="gu"] .thanks{font-style:normal}
       <li><a href="#details" data-gu="વિગતો">Details</a></li>
       <li><a href="#career" data-gu="કારકિર્દી">Career</a></li>
       <li><a href="#family" data-gu="પરિવાર">Family</a></li>
-      <li><a href="#establishments" data-gu="વારસો">Legacy</a></li>
+      <li><a href="#establishments" data-gu="વારસો">Legacy</a></li><!--
       <li><a href="#gallery" data-gu="ગેલેરી">Gallery</a></li>
-      <li><a href="#preferences" data-gu="અપેક્ષાઓ">Preferences</a></li>
+      <li><a href="#preferences" data-gu="અપેક્ષાઓ">Preferences</a></li>-->
       <li><a href="#contact" data-gu="સંપર્ક">Contact</a></li>
     </ul>
     <div class="lang" role="group" aria-label="Language">
@@ -393,7 +401,7 @@ html[lang="gu"] .thanks{font-style:normal}
     <div class="hero-visual">
       <div class="arch">
         <!-- PHOTO: assets/images/arpit-main.jpg -->
-        <figure class="ph r-34"><img src="images/tradition.jpg" data-gu-alt="અર્પિત કુકડિયાની ઔપચારિક તસવીર" alt="Formal portrait of Arpit Kukadiya"><figcaption><span class="mono">AK</span><span data-gu="પોટ્રેટ તસવીર">Portrait photo</span><small>arpit-main.jpg</small></figcaption></figure>
+        <figure class="ph r-34"><img src="images/traditional.jpg" data-gu-alt="અર્પિત કુકડિયાની ઔપચારિક તસવીર" alt="Formal portrait of Arpit Kukadiya"><figcaption><span class="mono">AK</span><span data-gu="પોટ્રેટ તસવીર">Portrait photo</span><small>arpit-main.jpg</small></figcaption></figure>
       </div>
     </div>
   </div>
@@ -428,11 +436,6 @@ html[lang="gu"] .thanks{font-style:normal}
         <p data-gu="મને પરિવાર સાથે સમય વિતાવવો, નવી જગ્યાઓ ફરવી અને ટેકનોલોજીના નવા વિકાસથી માહિતગાર રહેવું ગમે છે. મારા માટે સમજણ, ધીરજ અને પરસ્પર સહકાર સફળ લગ્નજીવનનો પાયો છે.">I enjoy spending time with my family, exploring new places and keeping up with developments in technology. To me, understanding, patience and mutual support are the foundation of a successful marriage.</p>
       </div>
     </div>
-    <div class="grid-3">
-      <article class="card center reveal"><div class="icon-ring"><svg class="i"><use href="#i-users"/></svg></div><h3 data-gu="પારિવારિક મૂલ્યો">Family Values</h3><p data-gu="વડીલો, સંબંધો અને એકતા પ્રત્યે આદર.">Respect for elders, relationships and togetherness.</p></article>
-      <article class="card center reveal"><div class="icon-ring"><svg class="i"><use href="#i-trend"/></svg></div><h3 data-gu="વ્યાવસાયિક મહત્ત્વાકાંક્ષા">Professional Ambition</h3><p data-gu="સતત શીખવા અને કારકિર્દીના વિકાસ માટે પ્રતિબદ્ધ.">Committed to continuous learning and career growth.</p></article>
-      <article class="card center reveal"><div class="icon-ring"><svg class="i"><use href="#i-shield"/></svg></div><h3 data-gu="પ્રામાણિકતા અને આદર">Honesty &amp; Respect</h3><p data-gu="પારદર્શિતા, વિશ્વાસ અને સમજણમાં માને છે.">Believes in transparency, trust and understanding.</p></article>
-    </div>
   </div>
 </section>
 
@@ -457,7 +460,7 @@ html[lang="gu"] .thanks{font-style:normal}
       <div class="d-item"><div class="icon-ring"><svg class="i"><use href="#i-rupee"/></svg></div><div><dt class="d-label" data-gu="વાર્ષિક પેકેજ">Annual Package</dt><dd data-gu="₹3.5 લાખ પ્રતિ વર્ષ">₹3.5 Lakhs per annum</dd></div></div>
       <div class="d-item"><div class="icon-ring"><svg class="i"><use href="#i-pin"/></svg></div><div><dt class="d-label" data-gu="હાલનું શહેર">Current City</dt><dd data-gu="ગાંધીનગર, ગુજરાત">Gandhinagar, Gujarat</dd></div></div>
       <div class="d-item"><div class="icon-ring"><svg class="i"><use href="#i-home"/></svg></div><div><dt class="d-label" data-gu="વતન">Native Place</dt><dd data-gu="કણપર, રાજકોટ, ગુજરાત">Kanpar, Rajkot, Gujarat</dd></div></div>
-      <div class="d-item"><div class="icon-ring"><svg class="i"><use href="#i-lang"/></svg></div><div><dt class="d-label" data-gu="માતૃભાષા">Mother Tongue</dt><dd data-gu="ગુજરાતી">Gujarati</dd></div></div>
+      <div class="d-item"><div class="icon-ring"><svg class="i"><use href="#i-home"/></svg></div><div><dt class="d-label" data-gu="માતાપિતાનું નિવાસસ્થાન">Parents' Residence</dt><dd data-gu="ગોંડલ">Gondal</dd></div></div>
     </dl>
   </div>
 </section>
@@ -501,7 +504,7 @@ html[lang="gu"] .thanks{font-style:normal}
 
     <div class="family-photo reveal">
       <!-- PHOTO: assets/images/family-photo.jpg -->
-      <figure class="ph r-169"><img src="images/family.jpeg" data-gu-alt="કુકડિયા પરિવાર સાથે" alt="The Kukadiya family together"><figcaption><span class="mono">KF</span><span data-gu="પારિવારિક તસવીર">Family photo</span><small>family-photo.jpg</small></figcaption></figure>
+      <figure class="ph r-169"><img src="images/family.jpg" data-gu-alt="કુકડિયા પરિવાર સાથે" alt="The Kukadiya family together"><figcaption><span class="mono">KF</span><span data-gu="પારિવારિક તસવીર">Family photo</span><small>family-photo.jpg</small></figcaption></figure>
     </div>
 
     <h3 class="group-title" data-gu="દાદા-દાદી">Grandparents</h3>
@@ -534,7 +537,7 @@ html[lang="gu"] .thanks{font-style:normal}
       <article class="est reveal">
         <div class="media"><span class="tag" data-gu="વ્યવસાય">Business</span>
         <!-- PHOTO: assets/images/shiv-industries.jpg -->
-        <figure class="ph r-43"><img src="images/shiv(1).jpeg" data-gu-alt="શિવ ઇન્ડસ્ટ્રીઝ, અમરેલી" alt="Shiv Industries, Amreli"><figcaption><span class="mono"><svg class="i"><use href="#i-building"/></svg></span><span data-gu="વ્યવસાયની તસવીર">Business photo</span><small>shiv-industries.jpg</small></figcaption></figure></div>
+        <figure class="ph r-43"><img src="images/shiv.jpeg" data-gu-alt="શિવ ઇન્ડસ્ટ્રીઝ, અમરેલી" alt="Shiv Industries, Amreli"><figcaption><span class="mono"><svg class="i"><use href="#i-building"/></svg></span><span data-gu="વ્યવસાયની તસવીર">Business photo</span><small>shiv-industries.jpg</small></figcaption></figure></div>
         <div class="est-body"><h3 data-gu="શિવ ઇન્ડસ્ટ્રીઝ">Shiv Industries</h3><p><svg class="i"><use href="#i-pin"/></svg><span data-gu="અમરેલી">Amreli</span></p></div>
       </article>
       <article class="est reveal">
@@ -553,13 +556,13 @@ html[lang="gu"] .thanks{font-style:normal}
         <div class="media"><span class="tag" data-gu="રહેણાંક">Residential</span>
         <!-- PHOTO: assets/images/residential-property.jpg -->
         <figure class="ph r-43"><img src="images/residential-property.jpg" data-gu-alt="પરિવારની રહેણાંક મિલકત" alt="Family residential property"><figcaption><span class="mono"><svg class="i"><use href="#i-home"/></svg></span><span data-gu="મિલકતની તસવીર">Property photo</span><small>residential-property.jpg</small></figcaption></figure></div>
-        <div class="est-body"><h3 data-gu="રહેણાંક મિલકતો">Residential Properties</h3><p><svg class="i"><use href="#i-pin"/></svg><span data-gu="અમરેલી">Amreli</span></p><p><svg class="i"><use href="#i-pin"/></svg><span data-gu="ગોંડલ (ભાડાનું રહેઠાણ)">Gondal (rented accommodation)</span></p></div>
+        <div class="est-body"><h3 data-gu="રહેણાંક મિલકતો">Residential Properties</h3><p><svg class="i"><use href="#i-pin"/></svg><span data-gu="અમરેલી">Amreli</span></p><p><svg class="i"><use href="#i-pin"/></svg><span data-gu="Kanpar">Kanpar</span></p></div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ================= GALLERY ================= -->
+<!-- ================= GALLERY ================= 
 <section id="gallery" class="section alt">
   <div class="container">
     <header class="sec-head">
@@ -569,38 +572,36 @@ html[lang="gu"] .thanks{font-style:normal}
       <div class="orn"><i></i></div>
     </header>
     <div class="gallery">
-      <!-- PHOTOS: add each file in assets/images/ using the names below -->
       <button class="g-item reveal" type="button" data-gu-aria-label="ઔપચારિક તસવીર ખોલો" aria-label="Open formal portrait" data-cap="Formal portrait"><figure class="ph"><img src="images/formal.jpeg" data-gu-alt="ઔપચારિક તસવીર" alt="Formal portrait"><figcaption><span class="mono">AK</span><span data-gu="ઔપચારિક તસવીર">Formal portrait</span><small>arpit-main.jpg</small></figcaption></figure></button>
       <button class="g-item reveal" type="button" data-gu-aria-label="પરંપરાગત પોશાકની તસવીર ખોલો" aria-label="Open traditional outfit photo" data-cap="Traditional outfit"><figure class="ph"><img src="images/boy-main.jpg" data-gu-alt="પરંપરાગત પોશાકમાં" alt="Traditional outfit"><figcaption><span class="mono">AK</span><span data-gu="પરંપરાગત પોશાકમાં">Traditional outfit</span><small>arpit-traditional.jpg</small></figcaption></figure></button>
       <button class="g-item reveal" type="button" data-gu-aria-label="ખેતરની તસવીર ખોલો" aria-label="Open photo in the fields" data-cap="In the fields"><figure class="ph"><img src="images/arpit-car.jpg" data-gu-alt="ખેતરમાં" alt="In the fields"><figcaption><span class="mono">AK</span><span data-gu="ખેતરમાં">In the fields</span><small>arpit-fields.jpg</small></figcaption></figure></button>
       <button class="g-item reveal" type="button" data-gu-aria-label="સાંજની તસવીર ખોલો" aria-label="Open evening photo" data-cap="Evening"><figure class="ph"><img src="images/Traditional.jpg" data-gu-alt="સાંજની તસવીર" alt="Evening"><figcaption><span class="mono">AK</span><span data-gu="સાંજની તસવીર">Evening</span><small>arpit-evening.jpg</small></figcaption></figure></button>
       <button class="g-item reveal" type="button" data-gu-aria-label="સાદી તસવીર ખોલો" aria-label="Open casual photo" data-cap="Casual"><figure class="ph"><img src="images/casual.jpg" data-gu-alt="સાદી તસવીર" alt="Casual"><figcaption><span class="mono">AK</span><span data-gu="સાદી તસવીર">Casual</span><small>arpit-casual.jpg</small></figcaption></figure></button>
-      <button class="g-item reveal" type="button" data-gu-aria-label="પારિવારિક તસવીર ખોલો" aria-label="Open family photo" data-cap="With family"><figure class="ph"><img src="images/family.jpg" data-gu-alt="પરિવાર સાથે" alt="With family"><figcaption><span class="mono">KF</span><span data-gu="પરિવાર સાથે">With family</span><small>family-photo.jpg</small></figcaption></figure></button>
     </div>
   </div>
-</section>
+</section>  -->
 
-<!-- ================= PREFERENCES ================= -->
-<section id="preferences" class="section">
-  <div class="container">
-    <header class="sec-head">
-      <span class="eyebrow" data-gu="જીવનસાથીની અપેક્ષાઓ">Partner preferences</span>
-      <h2 data-gu="એક સુંદર સાથની અપેક્ષા">Looking Forward to a Beautiful Partnership</h2>
-      <p data-gu="વિશ્વાસ, આદર અને સમજણ પર રચાયેલો સંબંધ.">A relationship built on trust, respect and understanding.</p>
-      <div class="orn"><i></i></div>
-    </header>
-    <p class="intro" data-gu="અમે એક સારા, સંસ્કારી અને પ્રતિષ્ઠિત પરિવારની યોગ્ય જીવનસાથી શોધી રહ્યા છીએ. અમે માનીએ છીએ કે સુસંગતતા, પરસ્પર આદર અને સમજણ સુખી લગ્નજીવનનો પાયો છે.">We are looking for a suitable life partner from a good, cultured and respectable family. We believe compatibility, mutual respect and understanding are the foundation of a happy married life.</p>
-    <div class="grid-3">
-      <article class="card center reveal"><div class="icon-ring"><svg class="i"><use href="#i-book"/></svg></div><h3 data-gu="શિક્ષણ">Education</h3><p data-gu="શિક્ષિત અને શીખવા તથા વ્યક્તિગત વિકાસને મહત્ત્વ આપતી વ્યક્તિ.">A well-educated person who values learning and personal growth.</p></article>
-      <article class="card center reveal"><div class="icon-ring"><svg class="i"><use href="#i-home"/></svg></div><h3 data-gu="પારિવારિક મૂલ્યો">Family Values</h3><p data-gu="પરિવાર, વડીલો અને પરંપરાઓનો આદર કરનાર.">Someone who respects family, elders and traditions.</p></article>
-      <article class="card center reveal"><div class="icon-ring"><svg class="i"><use href="#i-chat"/></svg></div><h3 data-gu="સમજણ">Understanding</h3><p data-gu="દયાળુ અને સમજદાર, ખુલ્લા સંવાદમાં માનનાર.">A kind-hearted, understanding person who believes in open communication.</p></article>
-      <article class="card center reveal"><div class="icon-ring"><svg class="i"><use href="#i-scale"/></svg></div><h3 data-gu="પરસ્પર આદર">Mutual Respect</h3><p data-gu="સમાનતા, વિશ્વાસ અને પરસ્પર સહકારને મહત્ત્વ આપનાર.">Someone who values equality, trust and mutual support.</p></article>
-      <article class="card center reveal"><div class="icon-ring"><svg class="i"><use href="#i-sun"/></svg></div><h3 data-gu="આધુનિક દૃષ્ટિકોણ">Modern Outlook</h3><p data-gu="આધુનિક જીવન અને પરંપરાગત મૂલ્યો વચ્ચે સંતુલિત અભિગમ.">A balanced approach to modern life and traditional values.</p></article>
-      <article class="card center reveal"><div class="icon-ring"><svg class="i"><use href="#i-infinity"/></svg></div><h3 data-gu="સુસંગતતા">Compatibility</h3><p data-gu="લગ્નને જીવનભરની ભાગીદારી ગણનાર.">Someone who sees marriage as a lifelong partnership.</p></article>
-    </div>
-    <blockquote class="quote reveal" data-gu="સૌથી ઉપર, અમે માનીએ છીએ કે લગ્ન માત્ર બે વ્યક્તિઓનું મિલન નથી, પરંતુ બે પરિવારોનું જોડાણ છે.">Above all, we believe that marriage is not just the union of two individuals, but the bonding of two families.</blockquote>
-  </div>
-</section>
+
+
+    <!-- SECTION 8: PREFERENCES 
+    <section id="preferences" class="section preferences-section">
+        <div class="container">
+            <div class="section-title reveal-up">
+                <h2>Expectation</h2>
+                <div class="gold-divider center"></div>
+            </div>
+            <div class="pref-grid">
+                <div class="pref-card reveal-up delay-1">
+                    <i data-lucide="users"></i>
+                    <h4>Good Family Background</h4>
+                </div>
+                <div class="pref-card reveal-up delay-2">
+                    <i data-lucide="book-open"></i>
+                    <h4>Well Education</h4>
+                </div>
+            </div>
+        </div>
+    </section>-->
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="section contact">
@@ -626,8 +627,6 @@ html[lang="gu"] .thanks{font-style:normal}
 <footer class="footer">
   <div class="container">
     <p class="f-name" data-gu="અર્પિત કુકડિયા">Arpit Kukadiya</p>
-    <p data-gu="પારિવારિક પરિચય">A Family Introduction</p>
-    <p data-gu="પ્રેમ અને આદર સાથે બનાવેલ">Made with love &amp; respect</p>
     <p class="copy" data-gu="© 2026 અર્પિત કુકડિયા. સર્વ હક્ક સુરક્ષિત.">&copy; 2026 Arpit Kukadiya. All rights reserved.</p>
   </div>
 </footer>
