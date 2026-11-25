@@ -1,276 +1,625 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arpit Kukadiya - Matrimonial Introduction</title>
-    <meta name="description" content="Premium matrimonial biodata of Arpit Kukadiya.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-</head>
-<body class="loading">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arpit Kukadiya | Matrimonial Profile</title>
+<meta name="description" content="Discover the matrimonial profile of Arpit Kukadiya, including his education, professional journey, family background and values.">
+<meta name="theme-color" content="#F8F4EC">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arpit Kukadiya | Matrimonial Profile">
+<meta property="og:description" content="Discover the matrimonial profile of Arpit Kukadiya, including his education, professional journey, family background and values.">
+<meta property="og:image" content="assets/images/arpit-main.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<!-- FAVICON: replace with your own favicon file if desired -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23F8F4EC'/%3E%3Ctext x='32' y='42' font-size='28' text-anchor='middle' font-family='serif' fill='%23947347'%3EAK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ===== Design tokens ===== */
+:root{
+  --bg:#F8F4EC; --bg-2:#EFE7DA; --card:#FFFCF7;
+  --gold:#C6A66B; --gold-d:#947347; --brown:#684B36; --espresso:#30271F;
+  --text:#665C52; --border:#E6D9C5;
+  --serif:'Cormorant Garamond','Playfair Display',Georgia,serif;
+  --sans:'Lato','Inter',system-ui,sans-serif;
+  --s1:.5rem; --s2:1rem; --s3:1.5rem; --s4:2.5rem; --s5:5rem;
+  --radius:4px; --ease:cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.0625rem/1.75 var(--sans);overflow-x:hidden;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--espresso);font-weight:600;line-height:1.15;margin:0}
+p{margin:0 0 var(--s2)}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none;margin:0;padding:0}
+:focus-visible{outline:2px solid var(--gold-d);outline-offset:3px}
+[data-lucide]{width:1.25em;height:1.25em;stroke-width:1.4;color:var(--gold-d);flex:none}
+.skip{position:absolute;left:-999px;top:0;background:var(--espresso);color:#fff;padding:.5rem 1rem;z-index:200}
+.skip:focus{left:0}
+.container{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+.narrow{width:min(860px,100% - 2.5rem)}
+.center-text{text-align:center}
 
-    <!-- Cinematic Opening Overlay -->
-    <div id="loader" class="loader">
-        <div class="loader-content">
-            <div class="gold-line"></div>
-            <h1 class="loader-title">A Beautiful Journey</h1>
-            <div class="gold-line"></div>
-        </div>
+/* ===== Layout helpers ===== */
+.section{padding:var(--s5) 0}
+.section.alt{background:var(--bg-2)}
+.sec-head{text-align:center;margin-bottom:var(--s4)}
+.sec-head h2,.contact h2{font-size:clamp(2rem,4.6vw,3rem)}
+.sec-head p{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:var(--gold-d);margin:.5rem 0 0}
+.divider{display:block;width:84px;height:1px;background:var(--gold);margin:var(--s3) auto 0;position:relative}
+.divider::after{content:"";position:absolute;left:50%;top:-4px;width:8px;height:8px;background:var(--bg);border:1px solid var(--gold);transform:translateX(-50%) rotate(45deg)}
+.alt .divider::after{background:var(--bg-2)}
+.intro{max-width:720px;margin:0 auto var(--s4);text-align:center;font-size:1.1rem}
+.label{font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-d);font-weight:700;margin-bottom:var(--s2)}
+.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3)}
+.cards-2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s3);max-width:760px;margin-inline:auto}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:48px;padding:.75rem 1.75rem;border:1px solid var(--gold-d);border-radius:var(--radius);font-weight:700;font-size:.95rem;letter-spacing:.04em;cursor:pointer;transition:background .3s,color .3s,transform .3s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold-d);color:#FFFCF7}
+.btn-gold:hover{background:var(--brown)}
+.btn-gold [data-lucide]{color:#FFFCF7}
+.btn-outline{background:transparent;color:var(--brown)}
+.btn-outline:hover{background:var(--card)}
+.btn-row{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s3)}
+.btn-row.center{justify-content:center}
+
+/* ===== Navigation ===== */
+.site-header{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .3s,box-shadow .3s}
+.site-header.scrolled{background:rgba(248,244,236,.94);backdrop-filter:blur(8px);box-shadow:0 1px 14px rgba(48,39,31,.1)}
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.logo{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:var(--gold-d);letter-spacing:.08em}
+.menu{display:flex;gap:1.4rem}
+.menu a{position:relative;font-size:.86rem;letter-spacing:.05em;color:var(--brown);padding:.4rem 0}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.menu a:hover::after,.menu a.active::after{transform:scaleX(1)}
+.menu a.active{color:var(--gold-d);font-weight:700}
+.nav-toggle{display:none;width:48px;height:48px;background:none;border:0;cursor:pointer;position:relative}
+.nav-toggle span{position:absolute;left:12px;width:24px;height:2px;background:var(--brown);transition:transform .3s,opacity .3s}
+.nav-toggle span:nth-child(1){top:16px}.nav-toggle span:nth-child(2){top:23px}.nav-toggle span:nth-child(3){top:30px}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ===== Placeholders & frames ===== */
+.ph{position:relative;margin:0;overflow:hidden;background:linear-gradient(145deg,var(--bg-2),#E3D6C0);border:1px solid var(--border)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .8s var(--ease)}
+.ph figcaption{position:absolute;inset:0;display:grid;place-content:center;text-align:center;padding:1rem;font-family:var(--serif);font-size:1.25rem;color:var(--gold-d);line-height:1.3}
+.ph figcaption small{font:400 .75rem var(--sans);color:var(--text);opacity:.8;margin-top:.3rem}
+.ph.has-img figcaption{display:none}
+.ratio-portrait{aspect-ratio:4/5}.ratio-sq{aspect-ratio:1}.ratio-wide{aspect-ratio:16/10}.ratio-43{aspect-ratio:4/3}
+.frame{position:relative;padding:14px;border:1px solid var(--gold);background:var(--card)}
+.frame.small{max-width:420px;width:100%}
+.corner{position:absolute;width:26px;height:26px;border:2px solid var(--gold-d)}
+.corner.tl{top:-7px;left:-7px;border-right:0;border-bottom:0}.corner.tr{top:-7px;right:-7px;border-left:0;border-bottom:0}
+.corner.bl{bottom:-7px;left:-7px;border-right:0;border-top:0}.corner.br{bottom:-7px;right:-7px;border-left:0;border-top:0}
+
+/* ===== Hero ===== */
+.hero{min-height:100vh;display:flex;align-items:center;padding:110px 0 var(--s5);background:radial-gradient(circle at 80% 20%,#FFFCF7 0,transparent 55%),var(--bg)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--s4);align-items:center}
+.hero h1{font-size:clamp(3.2rem,8vw,6rem);letter-spacing:-.01em}
+.subtitle{font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--gold-d);margin:var(--s2) 0}
+.lead{max-width:520px}
+.hero-facts{display:grid;gap:.5rem;margin:var(--s3) 0 0;color:var(--brown);font-weight:700}
+.hero-facts li{display:flex;align-items:center;gap:.7rem}
+.hero-visual{max-width:440px;justify-self:center;width:100%}
+.hero-text>*{animation:rise .9s var(--ease) both}
+.hero-text>*:nth-child(2){animation-delay:.1s}.hero-text>*:nth-child(3){animation-delay:.2s}.hero-text>*:nth-child(4){animation-delay:.3s}.hero-text>*:nth-child(5){animation-delay:.4s}.hero-text>*:nth-child(6){animation-delay:.5s}
+.hero-visual{animation:rise 1.1s var(--ease) .2s both}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+/* ===== About ===== */
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:var(--s4);align-items:center;margin-bottom:var(--s4)}
+.about-text p{font-size:1.1rem}
+.about-text p:first-child::first-letter{font-family:var(--serif);font-size:3.4rem;float:left;line-height:.9;padding:.3rem .5rem 0 0;color:var(--gold-d)}
+.card{background:var(--card);border:1px solid var(--border);padding:var(--s3);transition:border-color .3s,box-shadow .3s}
+.card:hover{border-color:var(--gold);box-shadow:0 10px 30px rgba(148,115,71,.12)}
+.card.center{text-align:center}
+.card h3{font-size:1.6rem;margin:.6rem 0 .4rem}
+.card p:last-child{margin:0}
+.card>[data-lucide]{width:2rem;height:2rem}
+
+/* ===== Details ===== */
+.details{display:grid;grid-template-columns:repeat(2,1fr);gap:0 var(--s4);margin:0;background:var(--card);border:1px solid var(--border);padding:var(--s3) var(--s4)}
+.details div{display:grid;grid-template-columns:28px 1fr;column-gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border)}
+.details div:nth-last-child(-n+2){border-bottom:0}
+.details div:last-child:nth-child(odd){grid-column:1/-1;border-top:0}
+.details [data-lucide]{grid-row:span 2;margin-top:.2rem}
+.details dt{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d);font-weight:700}
+.details dd{margin:0;font-family:var(--serif);font-size:1.4rem;color:var(--espresso);line-height:1.3}
+
+/* ===== Timeline ===== */
+.timeline{position:relative;padding-left:2.2rem}
+.timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:1px;background:var(--gold)}
+.timeline li{position:relative;margin-bottom:var(--s3)}
+.timeline li:last-child{margin-bottom:0}
+.dot{position:absolute;left:calc(-2.2rem + 1px);top:1.7rem;width:13px;height:13px;background:var(--bg-2);border:1px solid var(--gold-d);transform:rotate(45deg)}
+.current .dot{background:var(--gold-d)}
+.timeline h3{font-size:1.6rem}
+.status{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--gold-d);margin:.3rem 0 .6rem}
+.meta{color:var(--brown);font-weight:700}
+
+/* ===== Family ===== */
+.group-title{text-align:center;font-size:1.9rem;margin:var(--s4) 0 var(--s3);display:flex;align-items:center;gap:var(--s2)}
+.group-title::before,.group-title::after{content:"";flex:1;height:1px;background:var(--border)}
+.person{text-align:center}
+.person>[data-lucide]{margin-bottom:.4rem}
+.role{display:block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d);font-weight:700;margin-bottom:.4rem}
+.person h4,.maternal h4{font-size:1.5rem;margin-bottom:.4rem}
+.family-photo{max-width:760px;margin:var(--s4) auto 0}
+.maternal{max-width:560px;margin-inline:auto;text-align:center}
+.maternal>[data-lucide]{width:2rem;height:2rem}
+.names{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin:var(--s2) 0}
+.names li{padding:.3rem 1.1rem;border:1px solid var(--gold);font-family:var(--serif);font-size:1.25rem;color:var(--espresso)}
+
+/* ===== Establishments ===== */
+.est-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s3)}
+.est{background:var(--card);border:1px solid var(--border);transition:border-color .3s,box-shadow .3s;display:flex;flex-direction:column}
+.est .ph{border:0;border-bottom:1px solid var(--border)}
+.est:hover{border-color:var(--gold);box-shadow:0 10px 30px rgba(148,115,71,.14)}
+.est:hover img,.g-item:hover img{transform:scale(1.06)}
+.est-body{padding:var(--s2) var(--s3) var(--s3)}
+.est h3{font-size:1.5rem;margin-bottom:.5rem}
+.est-body p{display:flex;gap:.5rem;align-items:flex-start;margin:0 0 .3rem;font-size:.97rem}
+.est-body [data-lucide]{margin-top:.25rem;width:1.1em;height:1.1em}
+
+/* ===== Gallery ===== */
+.gallery{columns:3;column-gap:var(--s3)}
+.g-item{display:block;width:100%;margin:0 0 var(--s3);padding:0;border:0;background:none;cursor:zoom-in;break-inside:avoid;position:relative}
+.g-item .ph{transition:border-color .3s}
+.g-item:hover .ph{border-color:var(--gold)}
+
+/* ===== Closing quote / contact ===== */
+.closing{max-width:760px;margin:var(--s4) auto 0;text-align:center;font-family:var(--serif);font-style:italic;font-size:clamp(1.5rem,3vw,2rem);line-height:1.4;color:var(--brown);padding:var(--s3) 0;border-block:1px solid var(--gold)}
+.contact{background:var(--espresso);color:#D9CDBB}
+.contact h2{color:#FFFCF7}
+.contact .divider::after{background:var(--espresso)}
+.contact .intro{margin-top:var(--s3);color:#D9CDBB}
+.contact-card{background:var(--card);color:var(--text);border:1px solid var(--gold);padding:var(--s4) var(--s3);margin:0 auto var(--s3);max-width:560px;outline:1px solid rgba(198,166,107,.4);outline-offset:6px}
+.contact-card h3{font-size:2rem}
+.role-line{color:var(--gold-d);font-style:italic;font-family:var(--serif);font-size:1.2rem;margin-bottom:var(--s2)}
+.phone{display:flex;justify-content:center;gap:.6rem;align-items:center;font-size:1.4rem;color:var(--espresso);font-weight:700;margin:0}
+.thanks{font-family:var(--serif);font-style:italic;font-size:1.3rem;color:#E9DFCE}
+.footer{background:#241d17;color:#B9AC98;text-align:center;padding:var(--s4) 0;font-size:.92rem}
+.footer p{margin:0 0 .3rem}
+.f-name{font-family:var(--serif);font-size:1.7rem;color:var(--gold)}
+.made{font-style:italic;margin-top:var(--s1)!important}
+.copy{font-size:.82rem;opacity:.8}
+
+/* ===== Back to top ===== */
+.to-top{position:fixed;right:1.1rem;bottom:1.1rem;width:48px;height:48px;border:1px solid var(--gold-d);background:var(--card);cursor:pointer;display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateY(10px);transition:.3s;z-index:90}
+.to-top.show{opacity:1;visibility:visible;transform:none}
+
+/* ===== Lightbox ===== */
+.lightbox{position:fixed;inset:0;z-index:300;background:rgba(32,25,19,.94);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s}
+.lightbox[hidden]{display:none}
+.lightbox.open{opacity:1}
+.lb-fig{margin:0;max-width:min(88vw,900px);text-align:center}
+.lb-img{max-height:78vh;margin:0 auto;border:1px solid var(--gold);animation:rise .4s var(--ease)}
+.lb-missing{display:none;width:min(80vw,520px);aspect-ratio:4/5;max-height:70vh;place-content:center;border:1px solid var(--gold);color:var(--gold);font-family:var(--serif);font-size:1.5rem;background:#3a2f26;margin:0 auto}
+.lb-fig.missing .lb-missing{display:grid}.lb-fig.missing .lb-img{display:none}
+.lb-cap{color:#E9DFCE;margin-top:var(--s2);font-family:var(--serif);font-size:1.2rem}
+.lb-btn{position:absolute;width:52px;height:52px;border:1px solid var(--gold);background:rgba(32,25,19,.6);cursor:pointer;display:grid;place-items:center;z-index:2}
+.lb-btn [data-lucide]{color:var(--gold)}
+.lb-btn:hover{background:var(--gold-d)}.lb-btn:hover [data-lucide]{color:#fff}
+.lb-close{top:1rem;right:1rem}.lb-prev{left:1rem}.lb-next{right:1rem}
+
+/* ===== Scroll reveal ===== */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .reveal.visible{opacity:1;transform:none}
+
+/* ===== Responsive ===== */
+@media (max-width:1023px){
+  .menu{gap:.9rem}.menu a{font-size:.78rem}
+  .est-grid{grid-template-columns:repeat(2,1fr)}
+  .cards-3{grid-template-columns:repeat(2,1fr)}
+  .gallery{columns:2}
+}
+@media (max-width:900px){
+  .nav-toggle{display:block}
+  .menu{position:fixed;top:68px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--gold);box-shadow:0 14px 24px rgba(48,39,31,.12);max-height:0;overflow:hidden;visibility:hidden;transition:max-height .4s var(--ease),visibility .4s}
+  .menu.open{max-height:80vh;visibility:visible;overflow-y:auto}
+  .menu a{display:block;padding:1rem 1.5rem;font-size:1rem;border-top:1px solid var(--border)}
+  .menu a::after{display:none}
+  .site-header{background:rgba(248,244,236,.96)}
+}
+@media (max-width:767px){
+  body{font-size:1rem}
+  .section{padding:3.5rem 0}
+  .hero{padding-top:96px;min-height:auto}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .hero-visual{order:-1;max-width:340px}
+  .about-grid .frame{margin-inline:auto}
+  .cards-3,.cards-2,.details,.est-grid{grid-template-columns:1fr}
+  .details{padding:var(--s2) var(--s3)}
+  .details div:nth-last-child(-n+2){border-bottom:1px solid var(--border)}
+  .details div:last-child{border-bottom:0}
+  .gallery{columns:1}
+  .btn-row .btn{width:100%}
+  .group-title{font-size:1.6rem}
+  .lb-prev{left:.4rem}.lb-next{right:.4rem}.lb-btn{width:44px;height:44px;top:auto;bottom:1rem}
+  .lb-prev{left:calc(50% - 56px)}.lb-next{right:calc(50% - 56px)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}
+
+</style>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#about">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Primary">
+    <a href="#home" class="logo" aria-label="Arpit Kukadiya, home">A.K.</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul id="menu" class="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#career">Career</a></li>
+      <li><a href="#family">Family</a></li>
+      <li><a href="#establishments">Establishments</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#preferences">Partner Preferences</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="label">A Family Introduction</p>
+      <h1>Arpit Kukadiya</h1>
+      <p class="subtitle">A journey rooted in values, guided by ambition.</p>
+      <p class="lead">A blend of modern aspirations, professional growth and deep-rooted family values. An introduction to Arpit, his family, education and professional journey.</p>
+      <ul class="hero-facts">
+        <li><i data-lucide="briefcase"></i> Associate System Support Engineer</li>
+        <li><i data-lucide="map-pin"></i> Gandhinagar, Gujarat</li>
+      </ul>
+      <div class="btn-row">
+        <a class="btn btn-gold" href="#about">Discover My Story</a>
+        <a class="btn btn-outline" href="#contact">Connect With Family</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="frame">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <!-- PHOTO: place Arpit's main portrait at assets/images/arpit-main.jpg -->
+        <figure class="ph ratio-portrait"><img src="images/traditional.jpg" alt="Formal portrait of Arpit Kukadiya"><figcaption>Portrait photograph<br><small>arpit-main.jpg</small></figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section alt">
+  <div class="container">
+    <header class="sec-head"><h2>A Little About Arpit</h2><p>Getting to Know Me</p><span class="divider"></span></header>
+    <div class="about-grid reveal">
+      <div class="frame small">
+        <!-- PHOTO: place a second portrait at assets/images/arpit-about.jpg -->
+        <figure class="ph ratio-portrait"><img src="images/casual.jpg" alt="Arpit Kukadiya smiling in a relaxed portrait"><figcaption>Portrait photograph<br><small>arpit-about.jpg</small></figcaption></figure>
+      </div>
+      <div class="about-text">
+        <p>My name is Arpit Kukadiya. I am a well-mannered, family-oriented and career-focused individual who believes in maintaining a balance between professional ambitions and personal responsibilities.</p>
+        <p>I have completed my BCA and MCA and am currently working as an Associate System Support Engineer at InfosenseGlobal, Raysan, Gandhinagar.</p>
+        <p>I believe in honesty, simplicity, mutual respect and maintaining strong relationships. I value our family traditions and cultural roots while also having a progressive outlook towards life.</p>
+        <p>I enjoy spending quality time with family, exploring new places and keeping myself updated with advancements in technology. I believe that understanding, patience and mutual support are the foundations of a successful marriage.</p>
+      </div>
+    </div>
+    <div class="cards-3">
+      <article class="card center reveal"><i data-lucide="users"></i><h3>Family Values</h3><p>Respect for elders, relationships and togetherness.</p></article>
+      <article class="card center reveal"><i data-lucide="trending-up"></i><h3>Professional Ambition</h3><p>Focused on learning and continuous career development.</p></article>
+      <article class="card center reveal"><i data-lucide="handshake"></i><h3>Honesty &amp; Respect</h3><p>Believes in transparency, trust and understanding.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- DETAILS -->
+<section id="details" class="section">
+  <div class="container narrow">
+    <header class="sec-head"><h2>Personal Information</h2><p>A closer look at the essential details.</p><span class="divider"></span></header>
+    <dl class="details reveal">
+      <div><i data-lucide="user"></i><dt>Full Name</dt><dd>Arpit Kukadiya</dd></div>
+      <div><i data-lucide="calendar"></i><dt>Date of Birth</dt><dd>19 May 2004</dd></div>
+      <div><i data-lucide="ruler"></i><dt>Height</dt><dd>5 feet 5 inches</dd></div>
+      <div><i data-lucide="weight"></i><dt>Weight</dt><dd>68 kg</dd></div>
+      <div><i data-lucide="graduation-cap"></i><dt>Education</dt><dd>BCA, MCA</dd></div>
+      <div><i data-lucide="briefcase"></i><dt>Profession</dt><dd>Associate System Support Engineer</dd></div>
+      <div><i data-lucide="building-2"></i><dt>Company</dt><dd>InfosenseGlobal, Raysan</dd></div>
+      <div><i data-lucide="indian-rupee"></i><dt>Annual Package</dt><dd>₹3.5 Lakhs Per Annum</dd></div>
+      <div><i data-lucide="map-pin"></i><dt>Current City</dt><dd>Gandhinagar, Gujarat</dd></div>
+      <div><i data-lucide="house"></i><dt>Native Place</dt><dd>Kanpar, Rajkot, Gujarat</dd></div>
+      <div><i data-lucide="languages"></i><dt>Mother Tongue</dt><dd>Gujarati</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- CAREER -->
+<section id="career" class="section alt">
+  <div class="container narrow">
+    <header class="sec-head"><h2>Education &amp; Professional Journey</h2><p>Building a Career Through Learning and Dedication.</p><span class="divider"></span></header>
+    <ol class="timeline">
+      <li class="reveal"><span class="dot"></span><div class="card"><h3>Bachelor of Computer Applications (BCA)</h3><p class="status">Completed</p><p>Foundation in computer science, programming and IT fundamentals.</p></div></li>
+      <li class="reveal"><span class="dot"></span><div class="card"><h3>Master of Computer Applications (MCA)</h3><p class="status">Completed</p><p>Advanced studies in computer applications, software development and system management.</p></div></li>
+      <li class="reveal current"><span class="dot"></span><div class="card"><h3>Associate System Support Engineer</h3><p class="status">Currently Working</p>
+        <p class="meta">InfosenseGlobal &middot; Raysan, Gandhinagar<br>Annual Package: ₹3.5 LPA</p>
+        <p>Currently working in the IT sector, handling system support, troubleshooting and IT operations.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- FAMILY -->
+<section id="family" class="section">
+  <div class="container">
+    <header class="sec-head"><h2>The Kukadiya Family</h2><p>Rooted in Traditions, United by Values.</p><span class="divider"></span></header>
+    <p class="intro">We belong to a family with strong cultural roots, traditional values and a background in business and agriculture. Our family believes in togetherness, mutual respect, honesty and supporting one another.</p>
+
+    <h3 class="group-title">Immediate Family</h3>
+    <div class="cards-3">
+      <article class="card person reveal"><i data-lucide="user-round"></i><span class="role">Father</span><h4>Maheshbhai Parshotambhai Kukadiya</h4><p>Occupation: Business</p></article>
+      <article class="card person reveal"><i data-lucide="heart"></i><span class="role">Mother</span><h4>Sangitaben Maheshbhai Kukadiya</h4><p>Occupation: Homemaker</p></article>
+      <article class="card person reveal"><i data-lucide="user-round"></i><span class="role">Younger Brother</span><h4>Varshil Maheshbhai Kukadiya</h4><p>Occupation: Working</p></article>
+    </div>
+    <!-- CONFIRM: "Parshotambhai" (father's name) and "Parshotbhai" (grandfather's name) are spelled differently in the supplied details. Kept as supplied. -->
+
+    <div class="family-photo reveal">
+      <!-- PHOTO: place a family photograph at assets/images/family-photo.jpg -->
+      <figure class="ph ratio-wide"><img src="images/family.jpg" alt="The Kukadiya family together"><figcaption>Family photograph<br><small>family-photo.jpg</small></figcaption></figure>
     </div>
 
-    <!-- Navigation -->
-    <nav id="navbar" class="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">A.K.</a>
-            <div class="nav-toggle" id="navToggle">
-                <i data-lucide="menu"></i>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#details" class="nav-link">Details</a></li>
-                <li><a href="#family" class="nav-link">Family</a></li>
-                <li><a href="#career" class="nav-link">Career</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <h3 class="group-title">Grandparents</h3>
+    <div class="cards-2">
+      <article class="card person reveal"><i data-lucide="user-round"></i><span class="role">Grandfather</span><h4>Parshotbhai Preamjibhai Kukadiya</h4><p>Occupation: Farmer</p></article>
+      <!-- CONFIRM: spelling of "Preamjibhai" as supplied. -->
+      <article class="card person reveal"><i data-lucide="heart"></i><span class="role">Grandmother</span><h4>Muktaben Parshotbhai Kukadiya</h4><p>Occupation: Homemaker</p></article>
+    </div>
 
-    <!-- SECTION 1: HERO -->
-    <section id="hero" class="hero section">
-        <div class="hero-bg-decor"></div>
-        <div class="container hero-container">
-            <div class="hero-content reveal-up">
-                <span class="hero-label">Matrimonial Introduction</span>
-                <h1 class="hero-name">Arpit<br><span>Kukadiya</span></h1>
-                <div class="gold-divider"></div>
-                <a href="#about" class="btn btn-primary">Discover My Story <i data-lucide="arrow-down"></i></a>
-                    <button onclick="downloadBiodata()" class="btn btn-download">
-        <i data-lucide="download"></i>
-        Download Biodata
-    </button>
-            </div>
-            <div class="hero-image-wrapper reveal-scale">
-                <div class="arch-frame">
-                    <!-- Replace with your image -->
-                    <img src="images/traditional.jpg" alt="Arpit Kukadiya" class="hero-img">
-                </div>
-                <div class="floating-ornament orn-1"></div>
-                <div class="floating-ornament orn-2"></div>
-            </div>
-        </div>
-        <!-- Floating Gold Particles -->
-        <div class="particles" id="particles"></div>
-    </section>
+    <h3 class="group-title">Maternal Family</h3>
+    <article class="card maternal reveal">
+      <i data-lucide="users"></i>
+      <h4>Kavathiya Family</h4>
+      <ul class="names"><li>Prakashbhai</li><li>Ghanshyambhai</li><li>Rameshbhai</li></ul>
+      <p class="meta">Native Location: Kamar Kotda</p>
+      <!-- CONFIRM: "Kamar Kotda" spelling and its relation to "Kanpar" (native place) as supplied. -->
+    </article>
+  </div>
+</section>
 
-    <!-- SECTION 4: PERSONAL INFO -->
-    <section id="details" class="section details-section">
-        <div class="container">
-            <div class="section-title reveal-up">
-                <h2>Personal Details</h2>
-                <div class="gold-divider center"></div>
-            </div>
-            <div class="details-grid">
-               
-                <div class="detail-card reveal-up delay-2">
-                    <i data-lucide="calendar"></i>
-                    <h4>Date of Birth</h4>
-                    <p>19 May 2004</p>
-                </div>
-                <div class="detail-card reveal-up delay-3">
-                    <i data-lucide="graduation-cap"></i>
-                    <h4>Education</h4>
-                    <p>BCA, MCA</p>
-                </div>
-                <div class="detail-card reveal-up delay-1">
-                    <i data-lucide="briefcase"></i>
-                    <h4>Profession</h4>
-                    <p>Associate System Support Engineer</p>
-                </div>
-                <div class="detail-card reveal-up delay-2">
-                    <i data-lucide="building"></i>
-                    <h4>Company</h4>
-                    <p>InfosenseGlobal, Raysan</p>
-                </div>
-                <div class="detail-card reveal-up delay-3">
-                    <i data-lucide="map-pin"></i>
-                    <h4>Current City</h4>
-                    <p>Gandhinagar, Gujarat</p>
-                </div>
-                <div class="detail-card reveal-up delay-1">
-                    <i data-lucide="home"></i>
-                    <h4>Native Place</h4>
-                    <p>Kanpar, Rajkot</p>
-                </div>
-                <div class="detail-card reveal-up delay-2">
-                    <i data-lucide="ruler"></i>
-                    <h4>Height</h4>
-                    <p>5'5"</p>
-                </div>
-                
-                <div class="detail-card reveal-up delay-2">
-                    <i data-lucide="weight"></i>
-                    <h4>Weight</h4>
-                    <p>68 kg</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ESTABLISHMENTS -->
+<section id="establishments" class="section alt">
+  <div class="container">
+    <header class="sec-head"><h2>Our Family Establishments</h2><p>A Legacy of Hard Work and Dedication.</p><span class="divider"></span></header>
+    <p class="intro">Our family has business and agricultural interests, along with residential properties. We value the hard work and dedication that have contributed to our family's journey.</p>
+    <div class="est-grid">
+      <article class="est reveal">
+        <!-- PHOTO: industrial/factory photograph at assets/images/shiv-industries.jpg -->
+        <figure class="ph ratio-43"><img src="images/shiv.jpeg" alt="Shiv Industries, Amreli"><figcaption>Business photograph<br><small>shiv-industries.jpg</small></figcaption></figure>
+        <div class="est-body"><h3>Shiv Industries</h3><p><i data-lucide="map-pin"></i> Amreli</p></div>
+      </article>
+      <article class="est reveal">
+        <!-- PHOTO: industrial/factory photograph at assets/images/kailash-industries.jpg -->
+        <figure class="ph ratio-43"><img src="images/kailash.jpeg" alt="Kailash Industries, Gondal"><figcaption>Business photograph<br><small>kailash-industries.jpg</small></figcaption></figure>
+        <div class="est-body"><h3>Kailash Industries</h3><p><i data-lucide="map-pin"></i> Gondal</p></div>
+      </article>
+      <article class="est reveal">
+        <!-- PHOTO: farmland photograph at assets/images/agricultural-land.jpg -->
+        <figure class="ph ratio-43"><img src="images/farm.jpeg" alt="Family agricultural land at Kanpar"><figcaption>Farmland photograph<br><small>agricultural-land.jpg</small></figcaption></figure>
+        <div class="est-body"><h3>Agricultural Land</h3><p><i data-lucide="sprout"></i> 14 Vighas</p><p><i data-lucide="map-pin"></i> Kanpar</p></div>
+      </article>
+      <article class="est reveal">
+        <!-- PHOTO: residential property photograph at assets/images/residential-property.jpg -->
+        <figure class="ph ratio-43"><img src="assets/images/residential-property.jpg" alt="Family residential property"><figcaption>Property photograph<br><small>residential-property.jpg</small></figcaption></figure>
+        <div class="est-body"><h3>Residential Properties</h3><p><i data-lucide="map-pin"></i> Amreli</p><p><i data-lucide="map-pin"></i> Gondal (Rented Accommodation)</p></div>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <!-- SECTION 5: FAMILY -->
-    <section id="family" class="section family-section">
-        <div class="container">
-            <div class="section-title reveal-up">
-                <h2>My Family & Values</h2>
-                <div class="gold-divider center"></div>
-            </div>
-            <div class="family-container reveal-up">
-                <div class="family-column">
-                    <h3>Immediate Family</h3>
-                    <ul class="family-list">
-                        <li><span>Father</span> <strong>Maheshbhai Parshotambhai Kukadiya</strong> <br><em>(Business)</em></li>
-                        <li><span>Mother</span> <strong>Sangitaben Maheshbhai Kukadiya</strong> <br><em>(Housewife)</em></li>
-                        <li><span>Brother</span> <strong>Varshil Maheshbhai Kukadiya</strong> <br><em>(Younger, Working)</em></li>
-                    </ul>
-                </div>
-                <div class="family-column">
-                    <h3>Family Background</h3>
-                    <ul class="family-list">
-                        <li><span>Grandfather</span> <strong>Parshotambhai Preamjibhai Kukadiya</strong> <br><em>(Farmer)</em></li>
-                        <li><span>Grandmother</span> <strong>Muktaben Parshotambhai Kukadiya</strong> <br><em>(Housewife)</em></li>
-                        <li><span>Maternal Uncles</span> <strong>Prakashbhai, Ghanshyambhai, Rameshbhai</strong> <br><em>(Kavathiya Family, Kamar Kotda)</em></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="family-property reveal-up delay-2">
-                <h3>Our Establishments & Property</h3>
-                <div class="property-tags">
-                    <span>Shiv Industries – Amreli</span>
-                    <span>Kailash Industries – Gondal</span>
-                    <span>Residential Property – Amreli</span>
-                    <span>14 Vigha Agricultural Land – Kanpar</span>
-                    <span>Grandparents' Residence – Kanpar</span>
-                    <span>Parents' Residence – Rented Accommodation, Gondal</span>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <div class="container">
+    <header class="sec-head"><h2>Moments &amp; Memories</h2><p>A Glimpse Into My Life.</p><span class="divider"></span></header>
+    <div class="gallery">
+      <!-- PHOTOS: replace each file in assets/images/ (names below) -->
+      <button class="g-item reveal" type="button" aria-label="Open formal portrait"><figure class="ph ratio-portrait"><img src="assets/images/arpit-main.jpg" alt="Formal portrait of Arpit"><figcaption>Formal portrait<br><small>arpit-main.jpg</small></figcaption></figure></button>
+      <button class="g-item reveal" type="button" aria-label="Open traditional outfit photograph"><figure class="ph ratio-sq"><img src="assets/images/arpit-traditional.jpg" alt="Arpit in traditional attire"><figcaption>Traditional outfit<br><small>arpit-traditional.jpg</small></figcaption></figure></button>
+      <button class="g-item reveal" type="button" aria-label="Open photograph in the fields"><figure class="ph ratio-wide"><img src="assets/images/arpit-fields.jpg" alt="Arpit outdoors in the fields"><figcaption>In the fields<br><small>arpit-fields.jpg</small></figcaption></figure></button>
+      <button class="g-item reveal" type="button" aria-label="Open evening photograph"><figure class="ph ratio-portrait"><img src="assets/images/arpit-evening.jpg" alt="Arpit in an evening photograph"><figcaption>Evening photograph<br><small>arpit-evening.jpg</small></figcaption></figure></button>
+      <button class="g-item reveal" type="button" aria-label="Open casual photograph"><figure class="ph ratio-sq"><img src="assets/images/arpit-casual.jpg" alt="Arpit in a casual photograph"><figcaption>Casual photograph<br><small>arpit-casual.jpg</small></figcaption></figure></button>
+      <button class="g-item reveal" type="button" aria-label="Open family photograph"><figure class="ph ratio-wide"><img src="assets/images/family-photo.jpg" alt="Arpit with his family"><figcaption>Family photograph<br><small>family-photo.jpg</small></figcaption></figure></button>
+    </div>
+  </div>
+</section>
 
-    <!-- SECTION 6: CAREER -->
-    <section id="career" class="section career-section">
-        <div class="container">
-            <div class="section-title reveal-up">
-                <h2>My Professional Journey</h2>
-                <div class="gold-divider center"></div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item reveal-left">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Associate System Support Engineer</h3>
-                        <span class="timeline-date">Current</span>
-                        <h4>InfosenseGlobal, Raysan (Gandhinagar)</h4>
-                        <p>Managing system support, troubleshooting, and ensuring smooth IT operations for the organization. Package: 3.5 Lakhs/Annum.</p>
-                    </div>
-                </div>
-                <div class="timeline-item reveal-right">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Master of Computer Applications (MCA)</h3>
-                        <span class="timeline-date">Completed</span>
-                        <p>Advanced studies in computer applications, software development, and system management.</p>
-                    </div>
-                </div>
-                <div class="timeline-item reveal-left">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Computer Applications (BCA)</h3>
-                        <span class="timeline-date">Completed</span>
-                        <p>Foundation in computer science, programming, and IT fundamentals.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- PARTNER PREFERENCES -->
+<section id="preferences" class="section alt">
+  <div class="container">
+    <header class="sec-head"><h2>Looking Forward to a Beautiful Partnership</h2><p>A Relationship Built on Trust, Respect and Understanding.</p><span class="divider"></span></header>
+    <p class="intro">We are looking for a suitable life partner from a good, cultured and respectable family. We believe that compatibility, mutual respect and understanding are the foundation of a happy married life.</p>
+    <div class="cards-3">
+      <article class="card center reveal"><i data-lucide="book-open"></i><h3>Education</h3><p>A well-educated individual who values learning and personal development.</p></article>
+      <article class="card center reveal"><i data-lucide="house"></i><h3>Family Values</h3><p>Someone who respects family relationships, elders and traditions.</p></article>
+      <article class="card center reveal"><i data-lucide="message-circle-heart"></i><h3>Understanding</h3><p>A kind-hearted and understanding person who believes in communication.</p></article>
+      <article class="card center reveal"><i data-lucide="scale"></i><h3>Mutual Respect</h3><p>Someone who values equality, trust and mutual support.</p></article>
+      <article class="card center reveal"><i data-lucide="sunrise"></i><h3>Modern Outlook</h3><p>A balanced approach towards modern life and traditional values.</p></article>
+      <article class="card center reveal"><i data-lucide="infinity"></i><h3>Compatibility</h3><p>Someone who believes marriage is a lifelong partnership.</p></article>
+    </div>
+    <blockquote class="closing reveal">Above all, we believe that marriage is not just the coming together of two individuals, but also the bonding of two families.</blockquote>
+  </div>
+</section>
 
-    <!-- SECTION 8: PREFERENCES -->
-    <section id="preferences" class="section preferences-section">
-        <div class="container">
-            <div class="section-title reveal-up">
-                <h2>Expectation</h2>
-                <div class="gold-divider center"></div>
-            </div>
-            <div class="pref-grid">
-                <div class="pref-card reveal-up delay-1">
-                    <i data-lucide="users"></i>
-                    <h4>Good Family Background</h4>
-                </div>
-                <div class="pref-card reveal-up delay-2">
-                    <i data-lucide="book-open"></i>
-                    <h4>Well Education</h4>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+  <div class="container narrow center-text reveal">
+    <h2>Let's Begin a Beautiful Journey</h2>
+    <span class="divider"></span>
+    <p class="intro">For further discussions and to take this relationship forward, we warmly welcome communication from interested families.</p>
+    <div class="contact-card">
+      <h3>Maheshbhai Kukadiya</h3>
+      <p class="role-line">Father of Arpit Kukadiya</p>
+      <p class="phone"><i data-lucide="phone"></i> +91 94267 56662</p>
+      <div class="btn-row center">
+        <a class="btn btn-gold" href="tel:+919426756662"><i data-lucide="phone-call"></i> Call Now</a>
+        <a class="btn btn-outline" href="https://wa.me/919426756662?text=Namaste%2C%20we%20visited%20Arpit%20Kukadiya%27s%20matrimonial%20profile%20and%20would%20like%20to%20connect%20with%20your%20family%20for%20further%20discussion." target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i> Connect on WhatsApp</a>
+      </div>
+    </div>
+    <p class="thanks">Thank you for taking the time to know our family. We look forward to hearing from you with warmth and respect.</p>
+  </div>
+</section>
+</main>
 
-        <!-- SECTION 3: PHOTO GALLERY -->
-    <section id="gallery" class="section gallery-section">
-        <div class="container">
-            <div class="section-title reveal-up">
-                <h2>Some Moments of Me</h2>
-                <div class="gold-divider center"></div>
-            </div>
-            <div class="gallery-grid">
-                <!-- Image 1: Field Photo -->
-                <div class="gallery-item reveal-scale delay-1">
-                    <div class="img-frame">
-                        <img src="images/boy-main.jpg" alt="Arpit in the fields" class="gallery-img">
-                    </div>
-                 
-                </div>
-                
-                <!-- Image 2: Night Monument Photo -->
-                <div class="gallery-item reveal-scale delay-2">
-                    <div class="img-frame">
-                        <img src="images/casual.jpg" alt="Arpit at night" class="gallery-img">
-                    </div>
-                   
-                </div>
-            </div>
-        </div>
-    </section>
+<footer class="footer">
+  <div class="container">
+    <p class="f-name">Arpit Kukadiya</p>
+    <p>A Family Introduction</p>
+    <p class="made">Made with Love &amp; Respect</p>
+    <p class="copy">&copy; 2026 Arpit Kukadiya. All Rights Reserved.</p>
+  </div>
+</footer>
 
-    <!-- SECTION 9: CONTACT -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="contact-card reveal-scale">
-                <h2>contact number</h2>
-                <div class="contact-info">
-                    <h3>Maheshbhai Kukadiya</h3>
-                    <p><i data-lucide="phone"></i> +91 94267 56662</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<button class="to-top" type="button" aria-label="Back to top"><i data-lucide="chevron-up"></i></button>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="gold-divider center"></div>
-            <p class="copyright">&copy; 2026 Arpit Kukadiya. All Rights Reserved.</p>
-        </div>
-    </footer>
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="lb-btn lb-close" type="button" aria-label="Close"><i data-lucide="x"></i></button>
+  <button class="lb-btn lb-prev" type="button" aria-label="Previous photo"><i data-lucide="chevron-left"></i></button>
+  <figure class="lb-fig"><img class="lb-img" alt=""><div class="lb-missing">Photograph to be added</div><figcaption class="lb-cap"></figcaption></figure>
+  <button class="lb-btn lb-next" type="button" aria-label="Next photo"><i data-lucide="chevron-right"></i></button>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.classList.add('js');
+  if (window.lucide) lucide.createIcons();
+  initNav();
+  initActiveSection();
+  initReveal();
+  initImageFallback();
+  initBackToTop();
+  initLightbox();
+});
 
-    <!-- Back to Top -->
-    <button id="backToTop" class="back-to-top">
-        <i data-lucide="arrow-up"></i>
-    </button>
+/* Sticky header, mobile menu */
+function initNav() {
+  const header = document.querySelector('.site-header');
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('menu');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
 
-    <script src="js/script.js"></script>
+  const setOpen = (open) => {
+    menu.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
+  toggle.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
+  menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 900) setOpen(false); });
+}
+
+/* Highlight the nav link of the section in view */
+function initActiveSection() {
+  const links = [...document.querySelectorAll('.menu a')];
+  const sections = links.map((l) => document.querySelector(l.getAttribute('href'))).filter(Boolean);
+  if (!('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      links.forEach((l) => {
+        const on = l.getAttribute('href') === '#' + entry.target.id;
+        l.classList.toggle('active', on);
+        if (on) l.setAttribute('aria-current', 'true'); else l.removeAttribute('aria-current');
+      });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  sections.forEach((s) => io.observe(s));
+}
+
+/* Gentle scroll reveal */
+function initReveal() {
+  const items = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) { items.forEach((i) => i.classList.add('visible')); return; }
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  items.forEach((i) => io.observe(i));
+}
+
+/* Show the placeholder label until a real photo exists */
+function initImageFallback() {
+  document.querySelectorAll('.ph img').forEach((img) => {
+    const ph = img.closest('.ph');
+    const ok = () => ph.classList.add('has-img');
+    const fail = () => { ph.classList.remove('has-img'); img.style.display = 'none'; };
+    if (img.complete) { img.naturalWidth ? ok() : fail(); }
+    else { img.addEventListener('load', ok); img.addEventListener('error', fail); }
+  });
+}
+
+function initBackToTop() {
+  const btn = document.querySelector('.to-top');
+  window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 600), { passive: true });
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+}
+
+/* Gallery lightbox with keyboard support */
+function initLightbox() {
+  const box = document.querySelector('.lightbox');
+  const fig = box.querySelector('.lb-fig');
+  const img = box.querySelector('.lb-img');
+  const cap = box.querySelector('.lb-cap');
+  const items = [...document.querySelectorAll('.g-item')];
+  let index = 0, opener = null;
+
+  const show = (i) => {
+    index = (i + items.length) % items.length;
+    const src = items[index].querySelector('img');
+    fig.classList.remove('missing');
+    img.onerror = () => fig.classList.add('missing');
+    img.alt = src.alt;
+    img.src = src.getAttribute('src');
+    cap.textContent = src.alt;
+  };
+  const open = (i, trigger) => {
+    opener = trigger;
+    show(i);
+    box.hidden = false;
+    requestAnimationFrame(() => box.classList.add('open'));
+    document.body.style.overflow = 'hidden';
+    box.querySelector('.lb-close').focus();
+  };
+  const close = () => {
+    box.classList.remove('open');
+    setTimeout(() => { box.hidden = true; }, 250);
+    document.body.style.overflow = '';
+    if (opener) opener.focus();
+  };
+
+  items.forEach((it, i) => it.addEventListener('click', () => open(i, it)));
+  box.querySelector('.lb-close').addEventListener('click', close);
+  box.querySelector('.lb-prev').addEventListener('click', () => show(index - 1));
+  box.querySelector('.lb-next').addEventListener('click', () => show(index + 1));
+  box.addEventListener('click', (e) => { if (e.target === box) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (box.hidden) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(index - 1);
+    else if (e.key === 'ArrowRight') show(index + 1);
+  });
+}
+
+</script>
 </body>
 </html>
