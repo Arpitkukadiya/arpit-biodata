@@ -148,3 +148,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+// Download Matrimonial Biodata as PDF
+
+function downloadBiodata() {
+
+    // Wait briefly to ensure all page content is ready
+    window.setTimeout(() => {
+
+        window.print();
+
+    }, 200);
+
+}
